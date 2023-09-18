@@ -1,0 +1,40 @@
+name:                lab-records
+version:             0.1.0.0
+github:              "cs141/lab-records"
+author:              "Alex Dixon"
+maintainer:          "alexander.dixon@warwick.ac.uk"
+copyright:           "2022 Alex Dixon"
+
+extra-source-files:
+- README.md
+
+description:         This lab covers the creation, accessing, and updating of records.
+
+dependencies:
+- base >= 4.7 && < 5
+- containers
+- time
+- random
+- mtl
+- text
+
+library:
+  source-dirs: src
+
+tests:
+  lab-records-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - lab-records
+    - tasty
+    - tasty-reporter-muffled
+    - tasty-hunit
+    - tasty-quickcheck
+    - fakedata
+    - fakedata-quickcheck
+

@@ -1,0 +1,27 @@
+name:                lab-parsing
+version:             0.1.0.0
+github:              "cs141/lab-parsing"
+author:              "Alex Dixon"
+maintainer:          "alexander.dixon@warwick.ac.uk"
+copyright:           "2022 Alex Dixon"
+
+description:         Using monads to parse structured text.
+
+dependencies:
+- base >= 4.7 && < 5
+- megaparsec >=9.0 && <10
+- parser-combinators 
+
+library:
+  source-dirs: src
+
+executables:
+  lab-parsing-exe:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - lab-parsing

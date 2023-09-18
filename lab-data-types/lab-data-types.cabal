@@ -1,0 +1,55 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.34.4.
+--
+-- see: https://github.com/sol/hpack
+
+name:           lab-data-types
+version:        0.1.0.0
+description:    This lab covers the creation of custom data types, and defining type classes on those types.
+homepage:       https://github.com/cs141/lab-data-types#readme
+bug-reports:    https://github.com/cs141/lab-data-types/issues
+author:         Alex Dixon
+maintainer:     alexander.dixon@warwick.ac.uk
+copyright:      2022 Alex Dixon
+build-type:     Simple
+extra-source-files:
+    README.md
+
+source-repository head
+  type: git
+  location: https://github.com/cs141/lab-data-types
+
+library
+  exposed-modules:
+      DataTypes
+  other-modules:
+      Paths_lab_data_types
+  hs-source-dirs:
+      src
+  default-extensions:
+      TypeApplications
+  build-depends:
+      base >=4.7 && <5
+    , containers
+  default-language: Haskell2010
+
+test-suite lab-data-types-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_lab_data_types
+  hs-source-dirs:
+      test
+  default-extensions:
+      TypeApplications
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , containers
+    , lab-data-types
+    , tasty
+    , tasty-hunit
+    , tasty-quickcheck
+    , tasty-reporter-muffled
+  default-language: Haskell2010

@@ -1,0 +1,37 @@
+name:                lab-data-types
+version:             0.1.0.0
+github:              "cs141/lab-data-types"
+author:              "Alex Dixon"
+maintainer:          "alexander.dixon@warwick.ac.uk"
+copyright:           "2022 Alex Dixon"
+
+extra-source-files:
+- README.md
+
+description:         This lab covers the creation of custom data types, and defining type classes on those types.
+
+dependencies:
+- base >= 4.7 && < 5
+- containers
+
+default-extensions:
+- TypeApplications
+
+library:
+  source-dirs: src
+
+tests:
+  lab-data-types-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - lab-data-types
+    - tasty
+    - tasty-reporter-muffled
+    - tasty-hunit
+    - tasty-quickcheck
+

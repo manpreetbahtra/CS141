@@ -1,0 +1,33 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.35.0.
+--
+-- see: https://github.com/sol/hpack
+
+name:           lab-monoids
+version:        0.1.0.0
+description:    This lab covers semigroups and monoids.
+homepage:       https://github.com/cs141/lab-monoids#readme
+bug-reports:    https://github.com/cs141/lab-monoids/issues
+author:         Alex Dixon
+maintainer:     alexander.dixon@warwick.ac.uk
+copyright:      2022 Alex Dixon
+build-type:     Simple
+extra-source-files:
+    README.md
+
+source-repository head
+  type: git
+  location: https://github.com/cs141/lab-monoids
+
+library
+  exposed-modules:
+      Monoids
+  other-modules:
+      Paths_lab_monoids
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+    , containers
+  default-language: Haskell2010

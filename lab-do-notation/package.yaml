@@ -1,0 +1,46 @@
+name:                lab-do-notation
+version:             0.1.0.0
+github:              "cs141/lab-do-notation"
+author:              "Alex Dixon"
+maintainer:          "alexander.dixon@warwick.ac.uk"
+copyright:           "2022 Alex Dixon"
+
+extra-source-files:
+- README.md
+
+description:         This lab will walk you through the use of do-notation.
+
+dependencies:
+- base >= 4.7 && < 5
+- containers
+- random
+
+library:
+  source-dirs: src
+
+executables:
+  lab-do-notation-exe:
+    main: Main.hs
+    source-dirs: app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - lab-do-notation
+
+tests:
+  lab-do-notation-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - lab-do-notation
+    - tasty
+    - tasty-reporter-muffled
+    - tasty-hunit
+    - tasty-quickcheck
+
