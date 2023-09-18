@@ -1,0 +1,33 @@
+name:                lab-definitions
+version:             0.1.0.0
+github:              "cs141/lab-definitions"
+author:              "Alex Dixon"
+maintainer:          "alexander.dixon@warwick.ac.uk"
+copyright:           "2022 Alex Dixon"
+
+extra-source-files:
+- README.md
+
+description:         This lab covers writing basic value and function definitions; pattern matching; and guards.
+
+dependencies:
+- base >= 4.7 && < 5
+- containers
+
+library:
+  source-dirs: src
+
+tests:
+  lab-definitions-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - lab-definitions
+    - tasty
+    - tasty-quickcheck
+    - tasty-reporter-muffled
+    - tasty-hunit
