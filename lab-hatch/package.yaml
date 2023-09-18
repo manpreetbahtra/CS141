@@ -1,0 +1,21 @@
+name:                lab-hatch
+version:             0.1.0.0
+author:              "Alex Dixon"
+maintainer:          "alexander.dixon@warwick.ac.uk"
+copyright:           "2022 Alex Dixon"
+
+dependencies:
+- base >= 4.7 && < 5
+- gloss
+- gloss-juicy
+
+executables:
+  lab-hatch:
+    main: Main.hs
+    source-dirs:     
+    - src
+    - src/hatch
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
